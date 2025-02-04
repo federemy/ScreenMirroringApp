@@ -23,6 +23,9 @@ jobs:
       - name: Grant execute permission to Gradle Wrapper
         run: chmod +x gradlew
 
+      - name: Clean Project
+        run: ./gradlew clean
+
       - name: Build APK
         run: ./gradlew assembleDebug
 
@@ -30,4 +33,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: APK
-          path: app/build/outputs/apk/debug/app-debug.apk
+          path: "**/app-debug.apk"

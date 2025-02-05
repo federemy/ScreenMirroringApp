@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 19  // Android 4.4 (Kindle Fire HDX)
+    compileSdkVersion 30  // Android 4.4 (Kindle Fire HDX)
 
     defaultConfig {
         applicationId "com.example.mirror"
@@ -31,6 +31,7 @@ android {
 }
 
 dependencies {
-    implementation 'com.android.support:appcompat-v7:19.1.0'
     implementation 'fi.iki.elonen:NanoHTTPD:2.3.1'  // Servidor HTTP
+    implementation 'androidx.appcompat:appcompat:1.3.0' // Versión compatible con API 19
+    implementation 'com.android.support:support-v4:19.1.0' // 🔥 Soporte para Android 4.4
 }

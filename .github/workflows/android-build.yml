@@ -23,10 +23,10 @@ jobs:
       - name: Grant execute permission to Gradle Wrapper
         run: chmod +x gradlew
 
-      - name: Force Gradle Build
-        run: ./gradlew clean assembleDebug --stacktrace --info
+      - name: Forzar Generación de APK
+        run: ./gradlew clean assembleDebug --no-daemon --stacktrace --info
 
-      - name: List all generated files (Debugging)
+      - name: List output files (Debugging)
         run: find . -type f
 
       - name: Upload APK
